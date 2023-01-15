@@ -1,0 +1,49 @@
+<!-- Mundo html -->
+<canvas width="600" height="400">
+    <!-- Etiqueta para uso de graficos  -->
+</canvas>
+
+<!-- Mundo Javascript -->
+<script>
+    //--------------------- Funciones
+    
+    // circulo
+    function diseniarCircurferencia(x, y, radio) {
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function limpiarPantalla() {
+        pincel.clearRect(0,0,600,400);
+    }
+
+    function actualizarPantalla() {
+        limpiarPantalla();
+        diseniarCircurferencia(x,20,10);
+        if (x == 0) {
+            fin = false;
+        }
+        if (x == 600) {
+            fin = true;
+        }
+        if (fin) {
+            x--;
+        } else {
+            x++ //para que avance y se mueva
+        }
+    }
+
+    //se crea la parte basica para traernos la pantalla y el pincel que trae el contenido de la pantalla en 2 dimensiones
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgrey"; //defino el color de fondo de cuadrado
+    pincel.strokeStyle = "black"; //estilo de linea de borde
+    pincel.fillRect(0,0,600,400); //le digo que arranca en el 0 0 de ejes y que ocupe el tamaño total que puse al principio  
+    
+    var x = 0;
+    var fin = false;
+    setInterval(actualizarPantalla, 7); //setInterval permite que haga la funcion cada x tiempo. En este caso 1 segundo     
+
+</script>

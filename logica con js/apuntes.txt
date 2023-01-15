@@ -1,0 +1,19 @@
+Informacion:
+
+document.write(" "); -> codigo javaScript que puede contener etiquetas html y realizar calculos.
+Math.round(numeroDecimal) -> redondea para arriba un decimal. Tiene muchas alternativas, esta es la basica
+Math.random()*10; -> se elige un numero aleatorio de 0 a 10. Es decimal pero si lo combinamos con el Math.round(Math.random()*10) redondea hacia arriba
+
+Funciones:
+
+function x() {
+
+}
+
+const funcion = () => {
+
+}
+
+//Funciones especiales
+Math.round -> redondea para arriba. Ejemplo Math.round(Math.random()*10)
+Math.floor -> redondea para abajo. Ejemplo Math.floor(Math.random()*10)

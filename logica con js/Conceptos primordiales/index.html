@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <h1>Bienvenido</h1>
+    Visite <a href="http://www.aluracursos.com"> Alura Latam</a>
+    <br>
+    <script>
+
+        //funciones
+        function separarPrograna() {
+            document.write("<hr>"); //salto de linea pero pone una rayita. Esta bueno
+        }
+
+        function saltarLinea() {
+            document.write("<br>"); 
+        }
+
+        function imprimir(mensaje) {
+            document.write("<big>*** " + mensaje + " ***</big>");
+        }
+
+        function diferenciaDeEdad(edad1, edad2) {
+            var diferencia = edad1 - edad2
+            saltarLinea();
+            imprimir("La diferencia entre la edad de " + edad1 + " años y la edad " + edad2 + " años es de " + diferencia + " años.");
+            separarPrograna();
+        }
+
+        function indiceDeMasaCorporal(peso, altura, nombre) {
+            var calculoImc = peso / (altura * altura);
+            imprimir("El IMC de " + nombre + " es: " + calculoImc);
+            separarPrograna();
+        }
+
+        function indiceDeMasaCorporalReturn(peso, altura) {
+            return peso / (altura * altura);
+        }
+
+        // var imcFernando = indiceDeMasaCorporalReturn(71, 1.81);
+        // var imcMatilde = indiceDeMasaCorporalReturn(77, 1.70);
+
+        //llamando a las funciones
+        //separarPrograna();
+        
+        //diferenciaDeEdad(38, 36);
+        
+        // imprimir("Imc de Fernando es: " + imcFernando);
+        // saltarLinea();
+        // imprimir("Imc de Matilde es de: " + imcMatilde);
+        // saltarLinea();
+        // imprimir("El promedio de indices de masa corporal es: " + (imcFernando + imcMatilde) / 2);
+
+
+
+        // document.write(12 + "Usando JavaScript por primera vez");
+        // document.write("<br>"); //la recomendada- El break aparte
+        // document.write("Mi edad es...<br>"); //se recomienda el br aparte
+        // document.write("?<br>");
+        // document.write(36);
+
+        var nombre = prompt("Informe su nombre: ");
+        var peso = prompt("Informe su peso: ");
+        var altura = prompt("Informe su altura: ");
+        
+        calculoImc = indiceDeMasaCorporalReturn(peso, altura);
+        imprimir("Su IMC es: " + calculoImc);
+        saltarLinea();
+
+        if (calculoImc < 18.5) {
+            imprimir("Usted tiene un IMC recomendado");
+        }
+        if (calculoImc >= 18.5 && calculoImc < 24.9) {
+            imprimir("Usted tiene un IMC normal");            
+        }
+        if (calculoImc >= 25 && calculoImc < 30) {
+            imprimir("Usted tiene un IMC con sobrepeso");                        
+        }
+        if (calculoImc >= 30) {
+            imprimir("Usted tiene un IMC con obesidad");                        
+        }
+    </script>
+</body>
+</html>

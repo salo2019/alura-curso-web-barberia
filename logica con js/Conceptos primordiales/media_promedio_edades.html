@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <h1>Bienvenido</h1>
+    Visite <a href="http://www.aluracursos.com"> Alura Latam</a>
+    <br>
+    <script>
+
+        //funciones
+        function separarPrograna() {
+            document.write("<hr>"); //salto de linea pero pone una rayita. Esta bueno
+        }
+
+        function saltarLinea() {
+            document.write("<br>"); 
+        }
+
+        function imprimir(mensaje) {
+            document.write("<big>*** " + mensaje + " ***</big>");
+        }
+
+        //para separar al inicio
+        separarPrograna();
+
+        //comienza
+        var miembrosFamilia = parseInt(prompt("Ingrese cantidad de familia: "));
+        var contador = 1;
+        var total = 0;
+        while (contador <= miembrosFamilia) {
+            let edad = parseInt(prompt("Ingrese la edad del familiar: "));
+            total += edad;
+            contador++;
+        }
+
+        imprimir("La cantidad de familiares es: " + miembrosFamilia);
+        saltarLinea();
+        imprimir("La suma total de edades es: " + total);
+        saltarLinea();
+        imprimir("El promedio es: " + total/miembrosFamilia);
+
+        separarPrograna();
+
+        //numeros pares de 1 a 100
+        for (let index = 2; index <= 100; index+=2) {
+            imprimir("Numero par " + index);
+            saltarLinea();
+        }
+        imprimir("Fin for numeros pares 1 a 100 con For");
+        separarPrograna();
+
+        var numero = 2;
+        while (100 >= numero) {
+            imprimir("Numero par " + numero);
+            numero+=2;
+            saltarLinea();            
+        }
+        imprimir("Fin for numeros pares 1 a 100 con While");
+        separarPrograna();
+
+    </script>
+</body>
+</html>

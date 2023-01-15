@@ -1,0 +1,35 @@
+<!-- Mundo html -->
+<canvas width="600" height="400">
+    <!-- Etiqueta para uso de graficos  -->
+</canvas>
+
+<!-- Mundo Javascript -->
+<script>
+
+    function dibujarCuadradoVerde(x, y, color) {
+        //se crea la parte basica para traernos la pantalla y el pincel que trae el contenido de la pantalla en 2 dimensiones
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        //-----------------------
+    
+        //cuadrado
+        pincel.fillStyle = color; //defino el color
+        pincel.fillRect(x,y,50,50); //le digo que arranca en el 0 0 de ejes y que ocupe el tamaño total que puse al principio
+        pincel.strokeStyle = "black"; //estilo de linea de borde
+        pincel.strokeRect(x,y,50,50); //para la linea de borde
+    }
+
+
+    //con while
+    var x = 0;
+    while (x < 600) {
+        dibujarCuadradoVerde(x,0,"green");        
+        x = x + 50;
+    }
+
+    //con for
+    for (let index = 0; index < 600; index = index + 50) {
+        dibujarCuadradoVerde(index,50,"red");        
+    }
+
+</script>

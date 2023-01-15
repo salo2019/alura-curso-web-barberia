@@ -1,0 +1,5 @@
+Nota Importante:
+Es necesario utilizar los comandos "CTRL + O" para abrir los archivos HTML, 
+cuando sea necesario, y F12 o “CTRL + SHIFT + i” para abrir la ventana de herramientas del desarrollador (DevTools).
+Esta característica se abrirá en una nueva ventana para usar el depurador y otras utilidades. 
+Estos comandos se reiterarán a lo largo del desarrollo de los videos.

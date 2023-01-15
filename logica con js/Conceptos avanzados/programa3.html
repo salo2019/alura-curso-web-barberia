@@ -1,0 +1,58 @@
+<!-- Mundo html -->
+<canvas width="600" height="400">
+    <!-- Etiqueta para uso de graficos  -->
+</canvas>
+
+<!-- Mundo Javascript -->
+<script>
+
+    //se crea la parte basica para traernos la pantalla y el pincel que trae el contenido de la pantalla en 2 dimensiones
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    //-----------------------
+
+    //cuadrado
+    pincel.fillStyle = "grey"; //defino el color
+    pincel.fillRect(0, 0, 600, 400); //le digo que arranca en el 0 0 de ejes y que ocupe el tamaño total que puse al principio
+
+
+    //arreglo para los cambios de colores con el clicl derecho
+    var arregloColores = ["blue", "red", "green"]
+    var posicion = 0;
+
+    function alerta(evento) {
+        var x = evento.pageX - pantalla.offsetLeft; //para que reste el cachito de pantalla fuera del cuadrado y quede mas exacto
+        var y = evento.pageY - pantalla.offsetTop;
+        console.log("Coordenadas (" + x + ", " + y + ")");
+
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2*3.14);
+        pincel.fill();
+        console.log("Coordenadas (" + x + ", " + y + ")");
+    }
+
+    function dibujarCirculo(evento) {
+        var x = evento.pageX - pantalla.offsetLeft; //para que reste el cachito de pantalla fuera del cuadrado y quede mas exacto
+        var y = evento.pageY - pantalla.offsetTop;
+        pincel.fillStyle = arregloColores[posicion];
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2*3.14);
+        pincel.fill();
+        console.log("Coordenadas (" + x + ", " + y + ")");        
+    }
+
+    //se altera el color al hacer click derecho
+    function alterarColor() {
+        posicion++;
+        if (posicion >= arregloColores.length) {
+            posicion = 0;
+        }
+        return false; 
+    }
+
+    pantalla.oncontextmenu = alterarColor; //para que capte el clic derecho
+    pantalla.onclick = dibujarCirculo;
+
+
+</script>

@@ -1,0 +1,17 @@
+HTML
+
+strong -> poner en negrita
+
+CSS
+
+<p style="text-align:center"
+ se puede poner estilos en linea: 
+
+width:100%
+ hacer que imagen ocupe la anchura al 100% -> 
+
+display: inline-block
+ hacer que una lista ocupe solo su partecita.
+
+vertical-align: top;
+ hacer que se alinea verticalmente hacia el lado superior

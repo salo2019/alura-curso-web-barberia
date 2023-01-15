@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <h1>Bienvenido</h1>
+    Visite <a href="http://www.aluracursos.com"> Alura Latam</a>
+    <br>
+    <script>
+
+        //funciones
+        function separarPrograna() {
+            document.write("<hr>"); //salto de linea pero pone una rayita. Esta bueno
+        }
+
+        function saltarLinea() {
+            document.write("<br>"); 
+        }
+
+        function imprimir(mensaje) {
+            document.write("<big>*** " + mensaje + " ***</big>");
+        }
+
+        //para separar al inicio
+        separarPrograna();
+
+        //comienza
+        var numero = parseInt(prompt("Ingrese "));
+        var multiplicador = 1;
+
+        //con while
+        while (multiplicador <= 10) {
+            imprimir("El resultado de hacer " + numero + " veces " + multiplicador + " es " + numero*multiplicador);
+            multiplicador += 1
+            saltarLinea();
+        }
+        imprimir("Fin con while");
+        separarPrograna();
+
+        //con for (no necesito multiplicador dado que el for ya tiene el index)
+        for (let index = 1; index <= 10; index++) {
+            imprimir("El resultado de hacer " + numero + " veces " + index + " es " + numero*index);
+            saltarLinea();
+        }
+        imprimir("Fin con for");
+        separarPrograna();
+    </script>
+</body>
+</html>

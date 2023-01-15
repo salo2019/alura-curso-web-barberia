@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bienvenido</h1>
+    Visite <a href="http://www.aluracursos.com"> Alura Latam</a>
+    <br>
+    <script>
+
+        //funciones
+        function separarPrograna() {
+            document.write("<hr>"); //salto de linea pero pone una rayita. Esta bueno
+        }
+
+        function saltarLinea() {
+            document.write("<br>");
+        }
+
+        function imprimir(mensaje) {
+            document.write("<big>*** " + mensaje + " ***</big>");
+            saltarLinea();
+        }
+
+        //para separar al inicio
+        separarPrograna();
+
+        var inicioDeSesionRegistrado = "alura";
+        var contrasenhaRegistrada = "alura321";
+        var intentos = 3;
+        var contador = 0;
+        var inicioDeSesionIngresado;
+        var contrasenhaIngresada;
+
+        while (contador < intentos) {
+            inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            contrasenhaIngresada = prompt("Ingrese su contraseña");
+            contador++;
+            if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+                alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                break;
+            } else if (contador == 3) {
+                    alert("inicio de sesión inválido. Agotaste todos los intentos... tu cuenta fue bloqueada.");                    
+                } else {
+                    alert("inicio de sesión inválido. Vuelva a intentarlos. Te quedan " + (intentos-contador) + " intentos");
+                }
+            }
+            
+        imprimir("Fin programa");
+    </script>
+</body>
+
+</html>

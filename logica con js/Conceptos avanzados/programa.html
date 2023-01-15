@@ -1,0 +1,38 @@
+<!-- Mundo html -->
+<canvas width="600" height="400">
+    <!-- Etiqueta para uso de graficos  -->
+</canvas>
+
+<!-- Mundo Javascript -->
+<script>
+    //se crea la parte basica para traernos la pantalla y el pincel que trae el contenido de la pantalla en 2 dimensiones
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    //-----------------------
+
+
+    pincel.fillStyle = "#FDFAFA"; //defino el color
+    pincel.fillRect(0,0,600,400); //le digo que arranca en el 0 0 de ejes y que ocupe el tamaño total que puse al principio
+
+    //puedo darle otro color a otro pedazo
+    pincel.fillStyle = "#40CFFF"; //defino el color
+    pincel.fillRect(0,0,200,400); //le digo que arranca en el 0 0 de ejes y que ocupe el tamaño total que puse al principio
+
+    pincel.fillStyle = "#40CFFF"; //defino el color
+    pincel.fillRect(400,0,200,400); //le digo que arranca en el 0 0 de ejes y que ocupe el tamaño total que puse al principio
+
+    //graficando un triangulo ---------------
+    // pincel.fillStyle = "yellow";
+    // pincel.beginPath(); //comienza un nuevo camino nuestro pincel. Lo podemos mover
+    // pincel.moveTo(300,200); //le decimos al pincel que se mueva en el eje
+    // pincel.lineTo(200,400);
+    // pincel.lineTo(400,400);
+    // pincel.fill();
+
+    //graficando un circulo
+    pincel.fillStyle = "yellow";
+    pincel.beginPath();
+    pincel.arc(300,200,50,0,2*3.14);
+    pincel.fill();
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <h1>Bienvenido</h1>
+    Visite <a href="http://www.aluracursos.com"> Alura Latam</a>
+    <br>
+    <script>
+
+        //funciones
+        function separarPrograna() {
+            document.write("<hr>"); //salto de linea pero pone una rayita. Esta bueno
+        }
+
+        function saltarLinea() {
+            document.write("<br>"); 
+        }
+
+        function imprimir(mensaje) {
+            document.write("<big>*** " + mensaje + " ***</big>");
+        }
+
+        separarPrograna();
+
+        var limite = parseInt(prompt("Ingrese un año para ver que mundiales hubo hasta ese año: "));
+        var anioMundial = 1930;
+        while (anioMundial <= limite) {
+            imprimir("Mundial en el año " + anioMundial);
+            anioMundial += 4;
+            saltarLinea();
+        }
+        document.write("Fin");
+
+    </script>
+</body>
+</html>

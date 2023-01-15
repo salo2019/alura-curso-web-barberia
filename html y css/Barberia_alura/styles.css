@@ -1,0 +1,126 @@
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+} 
+
+/* pongo en una caja para darle un tamaño fijo */
+.caja {
+    width: 940px;
+    position: relative; /* en la caja general va relative */
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute; /* en el elemento particular a centrar va absolute */
+    top: 50%; /* es el 50% de los 940 de la caja */
+    right: 0%;
+}
+
+nav li {
+    /* para el menu sea horizontal */
+    display: inline; 
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    /* Texto en mayuscula */
+    text-transform: uppercase;
+    color: #000000;
+    /* poner en negrita */
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* Cuando paso el mouse por arriba */
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline; /*subrayado*/
+}
+
+.productos {
+    /* le agrego una totalidad como en la caja */
+    width: 940px;
+    margin: 0 auto;
+    /* que esten mas separados los productos */
+    padding: 50px;
+}
+
+.productos li {
+    display: inline-block;
+    /* Para que cada li ocupe el mismo espacio. En este caso tengo 3 elementos por eso le digo el 30 */
+    width: 30%;
+    text-align: center;
+    vertical-align: top;
+
+    /* ponemos un color para distinguir y que nos sirva de guia. Luego lo sacamos. Solo para prueba */
+    /* background-color: #CCCCCC; */
+
+    /* estos margenes va un poco en relacion a las 940 designados en el total */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /* esta propiedad hace que no se sobrepase el item. USARLO */
+    box-sizing: border-box;
+
+    /* bordes */
+    border-color: #000000;
+    border-width: 2px;
+    /* hay muchos tipos de bordes, Punteados, etc. Probar si queremos */
+    border-style: solid;
+
+    /* forma resumida de definir el borde. Primero va ancho, luego el estilo y ultimo color. Entonces lo anterior podria ser: 
+    border: 2px solid #000000;
+    */
+
+    /* Para el borde redondeado
+    border-top-left-radius: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 50px;
+    o todos en la misma linea
+    border-radius: 10px 25px 40px 50px;
+    */
+    border-radius: 10px;
+}
+
+.productos li:hover {
+    border-color: #c78c19;
+}
+
+/* Para capturar el clic */
+.productos li:active {
+    border-color: aqua;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Con esto digo... cuando se posicione en cualquier elemento li, tambien debe afectar al h2 */
+.productos li:hover h2 {
+    font-size: 33px;
+}
+
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    background: url(imagenes/imagenes/bg.jpg);
+    text-align: center;
+    padding: 40px;
+}
+
+.copyright {
+    color: white;
+    font-size: small;
+    margin: 20px;
+}
