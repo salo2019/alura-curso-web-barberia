@@ -24,16 +24,38 @@
         </div>
     </header>
     <main>
-        <h1>Formulario de contacto</h1>
         <form action="">
             <label for="nombreApellido">Nombre y apellido:</label>
-            <input type="text" id="nombreApellido">
+            <input type="text" id="nombreApellido" class="input-padron">
 
             <label for="correoElectronico">Correo electronico</label>
-            <input type="text" id="correoElectronico">
+            <input type="text" id="correoElectronico" class="input-padron">
 
             <label for="telefono">Telefono</label>
-            <input type="text" id="telefono">
+            <input type="text" id="telefono" class="input-padron">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea cols="70" rows="10" id="mensaje" class="input-padron"></textarea> 
+
+            <div>
+                <p>¿Como te gustaria que te contactemos?</p>
+
+                <label for="radio-email">
+                    <input type="radio" value="email" name="contacto" id="radio-email">Email
+                </label>
+    
+                <label for="radio-telefono">
+                    <input type="radio" value="telefono" name="contacto" id="radio-telefono">Telefono
+                </label>
+    
+                <label for="radio-whatsapp">
+                    <input type="radio" value="whatsapp" name="contacto" id="radio-whatsapp">Whatsapp
+                </label>
+            </div>
+
+            <label class="checkbox" for="checkbox">Te gustaria recibir novedades de la barberia alura??
+                <input type="checkbox" id="checkbox">                
+            </label>
 
             <input type="submit" value="Enviar formulario">
         </form>
