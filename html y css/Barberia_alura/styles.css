@@ -195,3 +195,38 @@ td, th {
     border: 1px solid black;
     padding: 8px 15px;
 }
+
+
+/* CSS para el HOME */
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; /* significa 2 veces su tamaño por defecto */
+    margin: 0 0 1em;
+    clear: left; /* va por el float de utensillos */
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensillos {
+    width: 120px;
+    float: left; /* para que quede a la izquierda y no tape el texto */
+    margin: 0 20px 20px 0;
+}
+
+.imagenDiferenciales {
+    width: 60%;
+}
