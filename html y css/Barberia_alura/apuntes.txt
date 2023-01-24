@@ -3,3 +3,18 @@ https://unicode-table.com/en/
 
 Explicacion de CSS y centrado de elementos:
 https://www.aluracursos.com/blog/centrar-un-elemento-con-css
+
+Para tipos de inputs (muy bueno)
+www.mobileinputtypes.com  
+
+En CSS:
+    Si tenemos modificaciones que cambian un mismo valor, css tomara como prioritario dependiendo la jerarquia de CSS.
+
+    Prioridades: 
+    1ero inline (es decir, estilos en linea pisa todo el resto) 
+    2do ID (es decir, el identificador sobreescribe el resto)
+    3ro Clase
+    4to etiqueta propiamente dicha, ejemplo p {}.
+
+    NOTA: Tambien se suma el peso en caso de hacer por ejemplo, etiqueta.clase (en este caso, superaria a una etiqueta sola)
+
