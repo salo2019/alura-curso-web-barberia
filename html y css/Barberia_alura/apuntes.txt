@@ -28,3 +28,8 @@ A crear una tabla HTML.
     La etiqueta tbody, representa el cuerpo de la tabla.
     La etiqueta th, representa la celda del encabezado de la tabla.
     La etiqueta tfoot, representa el pie de página de la tabla.
+
+Fuentes Externas:
+    Ir a google font
+
+
