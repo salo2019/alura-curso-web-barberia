@@ -202,6 +202,14 @@ td, th {
     width: 100%;
 }
 
+
+/* selectores css especiales. Hay un monton, investigar.  
+main > p {
+    /* este significa "modificame a solo los hijos de main"  
+    background: red;
+} 
+*/
+
 .principal {
     padding: 3em;
     background: #FEFEFE;
@@ -212,6 +220,7 @@ td, th {
     font-size: 2em; /* significa 2 veces su tamaño por defecto */
     margin: 0 0 1em;
     clear: left; /* va por el float de utensillos */
+    color: rgba(0, 0, 0, 0.7);
 }
 
 /* pseudo elementos 
@@ -222,7 +231,6 @@ td, th {
     font-style: italic;
 }
 */
-
 
 .principal p {
     margin: 0 0 1em;
@@ -292,6 +300,14 @@ td, th {
 
 .imagenDiferenciales {
     width: 60%;
+    transition: 400ms;
+    /* Sombras. Los parametros tienen un significado. Probarlos sacandolos */
+    box-shadow: 10px 10px 30px 20px black;
+}
+
+.imagenDiferenciales:hover {
+    /* Este sirve para indicar el porcentaje de visual que tendra el objeto */
+    opacity: 0.3;
 }
 
 .video {

@@ -32,4 +32,6 @@ A crear una tabla HTML.
 Fuentes Externas:
     Ir a google font
 
+Sombras en CSS:
+    buscar box shadow para poder entrenarlo
 
